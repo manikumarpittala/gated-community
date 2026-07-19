@@ -1,0 +1,493 @@
+/* ============================================================
+   Gowrayapally Gated Community — Global Stylesheet
+   ============================================================ */
+
+/* ---------- Reset & Base ---------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #e0e0e0;
+  padding: 30px 16px;
+}
+
+/* ---------- Card Container ---------- */
+.card {
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 18px;
+  padding: 44px 48px;
+  width: 100%;
+  max-width: 520px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  animation: fadeSlideUp 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.card-wide {
+  max-width: 920px;
+}
+
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(32px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------- Logo / Header Badge ---------- */
+.brand-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 28px;
+}
+
+.brand-logo .logo-icon {
+  width: 52px;
+  height: 52px;
+  background: linear-gradient(135deg, #56ccf2, #2f80ed);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin-right: 14px;
+  box-shadow: 0 4px 18px rgba(47, 128, 237, 0.45);
+  flex-shrink: 0;
+}
+
+/* ---------- Headings ---------- */
+h1, h2, h3, h4 {
+  color: #ffffff;
+  letter-spacing: 0.3px;
+}
+
+h1 {
+  font-size: 1.75rem;
+  margin-bottom: 6px;
+}
+
+h2 {
+  font-size: 1.25rem;
+  margin-bottom: 18px;
+  color: #b0c4de;
+}
+
+h3 {
+  font-size: 1.1rem;
+  color: #56ccf2;
+  margin-bottom: 10px;
+}
+
+.page-title {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.page-title span {
+  display: block;
+  font-size: 0.85rem;
+  color: #90afc8;
+  margin-top: 4px;
+  font-weight: 400;
+}
+
+/* ---------- Form Layout ---------- */
+.form-group {
+  margin-bottom: 18px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.85rem;
+  color: #b0c4de;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+textarea,
+select {
+  width: 100%;
+  padding: 11px 16px;
+  background: rgba(255, 255, 255, 0.09);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 0.95rem;
+  transition: border-color 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+  outline: none;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {
+  border-color: #56ccf2;
+  background: rgba(86, 204, 242, 0.08);
+  box-shadow: 0 0 0 3px rgba(86, 204, 242, 0.18);
+}
+
+input[readonly],
+input[disabled] {
+  background: rgba(255, 255, 255, 0.04);
+  color: #90afc8;
+  cursor: not-allowed;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+/* ---------- Submit / Action Button ---------- */
+input[type="submit"],
+button,
+.btn {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 12px 32px;
+  background: linear-gradient(135deg, #2f80ed, #56ccf2);
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease;
+  box-shadow: 0 6px 22px rgba(47, 128, 237, 0.38);
+  text-decoration: none;
+}
+
+input[type="submit"]:hover,
+button:hover,
+.btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.12);
+  box-shadow: 0 10px 28px rgba(47, 128, 237, 0.55);
+}
+
+input[type="submit"]:active,
+button:active,
+.btn:active {
+  transform: translateY(0);
+  filter: brightness(0.95);
+}
+
+/* ---------- Links ---------- */
+a {
+  color: #56ccf2;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+a:hover {
+  color: #a8e6f5;
+  text-shadow: 0 0 8px rgba(86, 204, 242, 0.5);
+}
+
+.link-line {
+  margin-top: 20px;
+  font-size: 0.88rem;
+  color: #90afc8;
+  text-align: center;
+}
+
+/* ---------- Alert / Status Messages ---------- */
+.alert {
+  padding: 14px 18px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  animation: fadeIn 0.4s ease;
+}
+
+.alert-error {
+  background: rgba(235, 87, 87, 0.18);
+  border: 1px solid rgba(235, 87, 87, 0.4);
+  color: #f4a6a6;
+}
+
+.alert-success {
+  background: rgba(39, 174, 96, 0.18);
+  border: 1px solid rgba(39, 174, 96, 0.4);
+  color: #a6f4c5;
+}
+
+.alert-info {
+  background: rgba(86, 204, 242, 0.12);
+  border: 1px solid rgba(86, 204, 242, 0.3);
+  color: #b0e6f8;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; } to { opacity: 1; }
+}
+
+/* ---------- Dashboard Nav Cards (Admin / Resident) ---------- */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 28px;
+}
+
+.nav-card {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  padding: 28px 20px;
+  text-align: center;
+  transition: transform 0.22s ease, background 0.22s ease, box-shadow 0.22s ease;
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
+  color: #e0e0e0;
+}
+
+.nav-card:hover {
+  transform: translateY(-5px);
+  background: rgba(86, 204, 242, 0.1);
+  box-shadow: 0 12px 34px rgba(47, 128, 237, 0.3);
+  color: #ffffff;
+  text-shadow: none;
+}
+
+.nav-card .nav-icon {
+  font-size: 2.2rem;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.nav-card .nav-label {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+/* ---------- Tables ---------- */
+.table-wrapper {
+  overflow-x: auto;
+  border-radius: 14px;
+  margin-top: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+thead tr {
+  background: linear-gradient(135deg, #2f80ed, #56ccf2);
+}
+
+thead th {
+  padding: 13px 16px;
+  text-align: left;
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+}
+
+tbody tr {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  transition: background 0.18s ease;
+}
+
+tbody tr:hover {
+  background: rgba(86, 204, 242, 0.07);
+}
+
+tbody td {
+  padding: 12px 16px;
+  color: #d0dce8;
+  vertical-align: middle;
+}
+
+/* ---------- Status Badges ---------- */
+.badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.badge-pending {
+  background: rgba(242, 153, 74, 0.2);
+  color: #f2994a;
+  border: 1px solid rgba(242, 153, 74, 0.4);
+}
+
+.badge-inprogress {
+  background: rgba(86, 204, 242, 0.15);
+  color: #56ccf2;
+  border: 1px solid rgba(86, 204, 242, 0.3);
+}
+
+.badge-resolved {
+  background: rgba(39, 174, 96, 0.15);
+  color: #6fcf97;
+  border: 1px solid rgba(39, 174, 96, 0.3);
+}
+
+/* Table action links — base */
+td a {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: 1px solid rgba(86, 204, 242, 0.35);
+  background: rgba(86, 204, 242, 0.08);
+  color: #56ccf2;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+td a:hover {
+  background: rgba(86, 204, 242, 0.22);
+  box-shadow: 0 4px 14px rgba(86, 204, 242, 0.25);
+  transform: translateY(-1px);
+  text-shadow: none;
+}
+
+td a + a {
+  margin-left: 6px;
+}
+
+/* Withdraw — red danger button */
+td a.btn-danger {
+  border-color: rgba(235, 87, 87, 0.45);
+  background: rgba(235, 87, 87, 0.1);
+  color: #f4a6a6;
+}
+
+td a.btn-danger:hover {
+  background: rgba(235, 87, 87, 0.25);
+  box-shadow: 0 4px 14px rgba(235, 87, 87, 0.3);
+  color: #ffcfcf;
+}
+
+/* Update complaint — amber/yellow button */
+td a.btn-warning {
+  border-color: rgba(242, 201, 76, 0.45);
+  background: rgba(242, 201, 76, 0.1);
+  color: #f2c94c;
+}
+
+td a.btn-warning:hover {
+  background: rgba(242, 201, 76, 0.22);
+  box-shadow: 0 4px 14px rgba(242, 201, 76, 0.3);
+  color: #ffe58a;
+}
+
+/* Update Status (admin) — green button */
+td a.btn-success {
+  border-color: rgba(39, 174, 96, 0.45);
+  background: rgba(39, 174, 96, 0.1);
+  color: #6fcf97;
+}
+
+td a.btn-success:hover {
+  background: rgba(39, 174, 96, 0.22);
+  box-shadow: 0 4px 14px rgba(39, 174, 96, 0.3);
+  color: #a6f4c5;
+}
+
+/* ---------- Status Dropdown ---------- */
+select.status-select {
+  width: 100%;
+  padding: 11px 16px;
+  background: rgba(255, 255, 255, 0.09);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 0.95rem;
+  transition: border-color 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%2356ccf2' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 38px;
+}
+
+select.status-select:focus {
+  border-color: #56ccf2;
+  background-color: rgba(86, 204, 242, 0.08);
+  box-shadow: 0 0 0 3px rgba(86, 204, 242, 0.18);
+}
+
+select.status-select option {
+  background: #1a2a3a;
+  color: #e0e0e0;
+}
+
+/* ---------- Info Row (readonly field strip) ---------- */
+.info-strip {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 10px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.info-strip .info-label {
+  font-size: 0.75rem;
+  color: #90afc8;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.info-strip .info-value {
+  font-size: 0.95rem;
+  color: #d0dce8;
+  font-weight: 400;
+}
+
+/* ---------- Divider ---------- */
+.divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 22px 0;
+}
+
+/* ---------- Welcome Greeting ---------- */
+.welcome-name {
+  color: #56ccf2;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 600px) {
+  .card {
+    padding: 30px 22px;
+  }
+  h1 { font-size: 1.4rem; }
+}
