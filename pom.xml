@@ -40,17 +40,6 @@
 		    <version>7.3.7.Final</version>
 		    <scope>compile</scope>
 		</dependency>
-
-		<dependency>
-			<groupId>com.gatedcommunity</groupId>
-			<artifactId>GowrayapalliGatedCommunity</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
-		<dependency>
-			<groupId>EmployeeManagement</groupId>
-			<artifactId>EmployeeManagement</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
   </dependencies>
 
   <build>
