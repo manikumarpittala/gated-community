@@ -5,4 +5,4 @@ ENV MYSQL_DATABASE=gatedcommunity
 
 EXPOSE 3306
 
-ADD db_backup.sql docker-entrypoint-initdb.d/db_backup.sql
+COPY db_backup.sql docker-entrypoint-initdb.d/db_backup.sql
